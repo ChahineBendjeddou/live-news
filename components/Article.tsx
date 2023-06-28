@@ -7,7 +7,7 @@ interface ArticleProps {
 
 const Article: FC<ArticleProps> = ({ article }) => {
   return (
-    <article className="flex flex-col transition-all duration-200 ease-out rounded-lg shadow-sm bg-slate-100 dark:bg-slate-800 hover:scale-105 hover:shadow-lg hover:bg-slate-200 hover:text-gray-900">
+    <article className="flex flex-col transition-all duration-200 ease-out rounded-lg shadow-sm bg-slate-100 dark:bg-slate-800 hover:scale-105 hover:shadow-lg hover:bg-slate-200">
       {article.image && (
         <img
           src={article.image}

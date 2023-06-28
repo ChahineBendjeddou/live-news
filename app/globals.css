@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .navLink {
+    @apply p-4 text-center capitalize transition-transform duration-200 ease-out rounded-full cursor-pointer hover:underline decoration-orange-400 decoration-2 active:underline underline-offset-8 hover:font-bold hover:scale-110
+  }
+}

@@ -11,7 +11,7 @@ const Article: FC<ArticleProps> = ({ searchParams }) => {
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
   ) {
-    alert(searchParams)
+    console.log(searchParams)
     return notFound()
   }
 

@@ -10,8 +10,11 @@ const Article: FC<ArticleProps> = ({ searchParams }) => {
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
-  )
+  ) {
+    alert(searchParams)
     return notFound()
+  }
+
   const article: Article = searchParams
   return (
     <article>

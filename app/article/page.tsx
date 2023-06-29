@@ -7,11 +7,7 @@ interface ArticleProps {
 }
 
 const Article: FC<ArticleProps> = ({ searchParams }) => {
-  if (!searchParams) {
-    console.log(searchParams)
-
-    return notFound()
-  }
+  if (!searchParams) return notFound()
 
   const article: Article = searchParams
   return (

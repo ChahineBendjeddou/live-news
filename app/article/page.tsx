@@ -14,7 +14,7 @@ const Article: FC<ArticleProps> = ({ searchParams }) => {
   const article: Article = searchParams
   return (
     <article>
-      <section className="flex flex-col px-0 pb-24 lg:flex-row lg:px-10">
+      <section className="flex flex-col px-0 pt-10 pb-24 lg:flex-row lg:px-10">
         {article.image && (
           // eslint-disable-next-line @next/next/no-img-element
           <img

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { FC } from 'react'
 import ReadMoreButton from './ReadMoreButton'
+import LiveTimestamp from './LiveTimestamp'
 
 interface ArticleProps {
   article: Article
@@ -25,7 +26,9 @@ const Article: FC<ArticleProps> = ({ article }) => {
           </section>
           <footer className="flex pt-5 ml-auto space-x-1 text-xs italic text-right text-gray-400">
             <p>{article.source}-</p>
-            <p>{article.published_at}</p>
+            <p>
+              <LiveTimestamp time={article.published_at} />
+            </p>
           </footer>
         </div>
         <ReadMoreButton article={article} />

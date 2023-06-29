@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { FC } from 'react'
+import ReadMoreButton from './ReadMoreButton'
 
 interface ArticleProps {
   article: Article
@@ -9,6 +10,7 @@ const Article: FC<ArticleProps> = ({ article }) => {
   return (
     <article className="flex flex-col transition-all duration-200 ease-out rounded-lg shadow-sm bg-slate-100 dark:bg-slate-800 hover:scale-105 hover:shadow-lg hover:bg-slate-200">
       {article.image && (
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={article.image}
           alt={article.title}
@@ -26,6 +28,7 @@ const Article: FC<ArticleProps> = ({ article }) => {
             <p>{article.published_at}</p>
           </footer>
         </div>
+        <ReadMoreButton article={article} />
       </div>
     </article>
   )

@@ -11,6 +11,7 @@ const SearchBox: FC<SearchBoxProps> = ({}) => {
     e.preventDefault()
     if (!input) return
     router.push(`/search?term=${input.trim()}`)
+    setInput('')
   }
   return (
     <form

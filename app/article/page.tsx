@@ -7,11 +7,9 @@ interface ArticleProps {
 }
 
 const Article: FC<ArticleProps> = ({ searchParams }) => {
-  if (
-    (searchParams && Object.entries(searchParams).length === 0) ||
-    !searchParams
-  ) {
+  if (!searchParams) {
     console.log(searchParams)
+
     return notFound()
   }
 
